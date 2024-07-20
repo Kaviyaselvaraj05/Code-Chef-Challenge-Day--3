@@ -1,0 +1,1015 @@
+01)
+Donation Drive:
+A blood drive aims to collect 
+𝑁
+N number of blood donations.
+The drive has collected 
+𝑋
+X donations so far. Find the remaining number of donations needed to reach the target.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case contains two space-separated integers 
+𝑁
+N and 
+𝑋
+X — the number of required donations and the number of collected donations, respectively.
+Output Format
+For each test case, output on a new line, the remaining number of donations needed to reach the target.
+
+Constraints
+1
+≤
+𝑇
+≤
+200
+1≤T≤200
+1
+≤
+𝑋
+≤
+𝑁
+≤
+20
+1≤X≤N≤20
+Sample 1:
+Input
+Output
+4
+5 2
+3 3
+5 4
+7 5
+3
+0
+1
+2
+Explanation:
+Test case 
+1
+1: The drive aims to collect 
+5
+5 donations and has collected 
+2
+2 already. Thus, they need to collect 
+3
+3 more donations to reach the target.
+
+Test case 
+2
+2: The drive aims to collect 
+3
+3 donations and has collected 
+3
+3 already. Thus, they need to collect no more donations to reach the target.
+
+Test case 
+3
+3: The drive aims to collect 
+5
+5 donations and has collected 
+4
+4 already. Thus, they need to collect 
+1
+1 more donation to reach the target.
+
+Test case 
+4
+4: The drive aims to collect 
+7
+7 donations and has collected 
+5
+5 already. Thus, they need to collect 
+2
+2 more donations to reach the target.
+
+ANSWER:
+t=int(input())
+for i in range(t):
+    n, x=map(int, input().split())
+    print(abs(n-x))
+
+02)Kitchen Timings:
+The working hours of Chef’s kitchen are from 
+𝑋
+X pm to 
+𝑌
+Y pm 
+(
+1
+≤
+𝑋
+<
+𝑌
+≤
+12
+)
+(1≤X<Y≤12).
+
+Find the number of hours Chef works.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers 
+𝑋
+X and 
+𝑌
+Y — the starting and ending time of working hours respectively.
+Output Format
+For each test case, output on a new line, the number of hours Chef works.
+
+Constraints
+1
+≤
+𝑇
+≤
+100
+1≤T≤100
+1
+≤
+𝑋
+<
+𝑌
+≤
+12
+1≤X<Y≤12
+Sample 1:
+Input
+Output
+4
+1 2
+3 7
+9 11
+2 10
+1
+4
+2
+8
+Explanation:
+Test case 
+1
+1: Chef starts working at 
+1
+1 pm and works till 
+2
+2 pm. Thus, he works for 
+1
+1 hour.
+
+Test case 
+2
+2: Chef starts working at 
+3
+3 pm and works till 
+7
+7 pm. Thus, he works for 
+4
+4 hours.
+
+Test case 
+3
+3: Chef starts working at 
+9
+9 pm and works till 
+11
+11 pm. Thus, he works for 
+2
+2 hours.
+
+Test case 
+4
+4: Chef starts working at 
+2
+2 pm and works till 
+10
+10 pm. Thus, he works for 
+8
+8 hours.
+
+ANSWER:
+for i in range(int(input())):
+    a,b=map(int,input().split())
+    print(b-a)
+
+03)IPL Ticket Rush
+DAIICT college students want to attend an IPL match.
+
+A total of 
+𝑁
+N students from the college want to go while only 
+𝑀
+M tickets are available for the match.
+
+Determine how many students won't be able to book tickets.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers 
+𝑁
+N and 
+𝑀
+M — the number of students wants to go and the total number of tickets available, respectively.
+Output Format
+For each test case, output on a new line the number of students who won't be able to book tickets.
+
+Constraints
+1
+≤
+𝑇
+≤
+1000
+1≤T≤1000
+1
+≤
+𝑁
+,
+𝑀
+≤
+1
+0
+5
+1≤N,M≤10 
+5
+ 
+Sample 1:
+Input
+Output
+4
+5 3
+5 7
+4 1
+8 8
+2
+0
+3
+0
+Explanation:
+Test case 
+1
+1: There are 
+5
+5 students who want to go, and only 
+3
+3 tickets are available. Hence 
+2
+2 students won't be able to get tickets.
+
+Test case 
+2
+2: There are 
+5
+5 students who want to go, and 
+7
+7 tickets are available. So, every one of them will get the tickets.
+
+Test case 
+3
+3: There are 
+4
+4 students who want to go, and only 
+1
+1 ticket is available. Hence 
+3
+3 students won't be able to get tickets.
+
+Test case 
+4
+4: There are 
+8
+8 students who want to go, and 
+8
+8 tickets are available. So, every one of them will get the tickets.
+
+ANSWER:
+t = int(input())
+
+# Loop through all test cases
+for i in range(t):
+    # Get input for the number of students and tickets
+    n, m = map(int, input().split())
+    
+    # Calculate the number of students who won't be able to book tickets
+    if n > m:
+        print(n - m)
+    else:
+        print(0)
+
+04)Audible Range:
+Chef's dog binary hears frequencies starting from 
+67
+67 Hertz to 
+45000
+45000 Hertz (both inclusive).
+
+If Chef's commands have a frequency of 
+𝑋
+X Hertz, find whether binary can hear them or not.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of a single integer 
+𝑋
+X - the frequency of Chef's commands in Hertz.
+Output Format
+For each test case, output on a new line YES, if binary can hear Chef's commands. Otherwise, print NO.
+
+The output is case-insensitive. Thus, the strings YES, yes, yeS, and Yes are all considered the same.
+
+Constraints
+1
+≤
+𝑇
+≤
+1
+0
+4
+1≤T≤10 
+4
+ 
+1
+≤
+𝑋
+≤
+1
+0
+6
+1≤X≤10 
+6
+ 
+Sample 1:
+Input
+Output
+5
+42
+67
+402
+45000
+45005
+NO
+YES
+YES
+YES
+NO
+Explanation:
+Test case 
+1
+1: Chef's command has a frequency of 
+42
+42 Hertz which is less than 
+67
+67. Thus, it would not be audible to binary.
+
+Test case 
+2
+2: Chef's command has a frequency of 
+67
+67 Hertz which lies in the range 
+[
+67
+,
+45000
+]
+[67,45000]. Thus, it would be audible to binary.
+
+Test case 
+3
+3: Chef's command has a frequency of 
+402
+402 Hertz which lies in the range 
+[
+67
+,
+45000
+]
+[67,45000]. Thus, it would be audible to binary.
+
+Test case 
+4
+4: Chef's command has a frequency of 
+45000
+45000 Hertz which lies in the range 
+[
+67
+,
+45000
+]
+[67,45000]. Thus, it would be audible to binary.
+
+Test case 
+5
+5: Chef's command has a frequency of 
+45005
+45005 Hertz which is greater than 
+45000
+45000. Thus, it would not be audible to binary.
+
+Answer:
+t=int(input())
+for _ in range(t):
+    n=int(input())
+    if(n>=67 and n<=45000):
+        print("YES")
+        
+    else:
+        print("NO")
+
+05)Reach on Time
+Chef has recently moved into an apartment. It takes 
+30
+30 minutes for Chef to reach office from the apartment.
+
+Chef left for the office 
+𝑋
+X minutes before Chef was supposed to reach. Determine whether or not Chef will be able to reach on time.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of a single integer 
+𝑋
+X.
+Output Format
+For each test case, output YES if Chef will reach on time, NO otherwise.
+
+The output is case-insensitive. Thus, the strings YES, yes, yeS, and Yes are all considered the same.
+
+Constraints
+1
+≤
+𝑇
+≤
+60
+1≤T≤60
+1
+≤
+𝑋
+≤
+60
+1≤X≤60
+Sample 1:
+Input
+Output
+6
+30
+60
+14
+29
+31
+42
+YES
+YES
+NO
+NO
+YES
+YES
+Explanation:
+Test case 1: Chef leaves 
+30
+30 minutes before he is supposed to reach, so he will reach the office exactly on time since it takes 
+30
+30 minutes to commute.
+
+Test case 2: Chef will reach 
+30
+30 minutes early.
+
+Test case 3: Chef will reach 16 minutes late.
+
+ANSWER:
+goals = int(input())
+for distractions in range(goals):
+    wife = int(input())
+    if wife >= 30:
+        print('YES')
+    else:
+        print('NO')
+06)Puzzle Hunt
+Chef and some of his friends are planning to participate in a puzzle hunt event.
+
+The rules of the puzzle hunt state:
+"This hunt is intended for teams of 
+6
+6 to 
+8
+8 people."
+
+Chef's team has 
+𝑁
+N people in total. Are they eligible to participate?
+
+Input Format
+The first and only line of input will contain a single integer 
+𝑁
+N: the number of people present in Chef's team.
+
+Output Format
+Print the answer: Yes if Chef's team is eligible to participate, and No otherwise.
+
+Each letter in the output may be printed in either uppercase or lowercase, i.e, the outputs NO, No, nO, no will all be treated as equivalent.
+
+Constraints
+1
+≤
+𝑁
+≤
+10
+1≤N≤10
+Sample 1:
+Input
+Output
+4
+No
+Explanation:
+The puzzle hunt requires between 
+6
+6 and 
+8
+8 people in a team.
+4
+4 isn't between 
+6
+6 and 
+8
+8, so Chef's team cannot participate.
+
+Sample 2:
+Input
+Output
+7
+Yes
+Explanation:
+Chef's team has 
+7
+7 people, and 
+7
+7 lies between 
+6
+6 and 
+8
+8.
+So, Chef's team can participate in the event.
+
+Sample 3:
+Input
+Output
+8
+Yes
+Explanation:
+Chef's team has 
+8
+8 people, and 
+8
+8 lies between 
+6
+6 and 
+8
+8.
+So, Chef's team can participate in the event.
+
+ANSWER:
+N = int(input())
+if 6 <= N <= 8:
+    print("Yes")
+else:
+    print("No")
+
+07)Bone Appetit
+Trick or treat, bags of sweets, ghosts are walking down the street
+
+It's Halloween and Suri Bhai is out to get his treats.
+There are two sectors in his neighborhood, "Bones" and "Blood". They have 
+𝑁
+N and 
+𝑀
+M people, respectively.
+
+Each person in "Bones" will hand out 
+𝑋
+X treats, and each person in "Blood" will hand out 
+𝑌
+Y treats.
+How many treats does Suri Bhai get from visiting everyone in his neighborhood in total?
+
+Input Format
+The first line of input contains two space-separated integers 
+𝑁
+N and 
+𝑀
+M — the number of people in "Bones" and "Blood", respectively.
+The second line of input contains two space-separated integers 
+𝑋
+X and 
+𝑌
+Y — the number of treats handed out by each person in "Bones" and "Blood", respectively.
+Output Format
+For each test case output a single integer: the total number of treats Suri Bhai will receive.
+
+Constraints
+0
+≤
+𝑁
+,
+𝑀
+≤
+100
+0≤N,M≤100
+0
+≤
+𝑋
+,
+𝑌
+≤
+1000
+0≤X,Y≤1000
+Sample 1:
+Input
+Output
+4 2
+5 6
+32
+Explanation:
+"Bones" has 
+4
+4 people, each of who will give out 
+5
+5 treats, for a total of 
+4
+×
+5
+=
+20
+4×5=20 treats.
+"Blood" has 
+2
+2 people, each of who will give out 
+6
+6 treats, for a total of 
+2
+×
+6
+=
+12
+2×6=12 treats.
+The total number of treats is 
+20
++
+12
+=
+32
+20+12=32.
+Sample 2:
+Input
+Output
+5 0
+0 2
+0
+Explanation:
+"Bones" has 
+5
+5 people, each of who will give out 
+0
+0 treats, for a total of 
+5
+×
+0
+=
+0
+5×0=0 treats.
+"Blood" has 
+0
+0 people, each of who will give out 
+2
+2 treats, for a total of 
+0
+×
+2
+=
+0
+0×2=0 treats.
+The total number of treats is 
+0
++
+0
+=
+0
+0+0=0.
+
+ANSWER:
+n, m = map(int, input().split())
+x, y = map(int, input().split())
+
+print(n*x + m*y)
+
+08)Who is taller!
+Alice and Bob were having an argument about which of them is taller than the other. Charlie got irritated by the argument, and decided to settle the matter once and for all.
+
+Charlie measured the heights of Alice and Bob, and got to know that Alice's height is 
+𝑋
+X centimeters and Bob's height is 
+𝑌
+Y centimeters. Help Charlie decide who is taller.
+
+It is guaranteed that 
+𝑋
+≠
+𝑌
+X=Y.
+
+Input Format
+The first line of input will contain an integer 
+𝑇
+T — the number of test cases. The description of 
+𝑇
+T test cases follows.
+The first and only line of each test case contains two integers 
+𝑋
+X and 
+𝑌
+Y, as described in the problem statement.
+Output Format
+For each test case, output on a new line 
+A
+A if Alice is taller than Bob, else output 
+B
+B. The output is case insensitive, i.e, both 
+A
+A and 
+a
+a will be accepted as correct answers when Alice is taller.
+
+Constraints
+1
+≤
+𝑇
+≤
+1000
+1≤T≤1000
+100
+≤
+𝑋
+,
+𝑌
+≤
+200
+100≤X,Y≤200
+𝑋
+≠
+𝑌
+X=Y
+Sample 1:
+Input
+Output
+2
+150 160
+160 150
+B
+A
+Explanation:
+Test case 
+1
+1: In this case, 
+150
+<
+160
+150<160 so Bob is taller than Alice.
+
+Test case 
+2
+2: In this case, 
+160
+>
+150
+160>150 so Alice is taller than Bob.
+
+ANSWER:
+t = int(input())
+for _ in range(t):
+    line = input()
+    hight = line.split()
+    a = int(hight[0])
+    b = int(hight[1])
+    if a > b:
+        print("a")
+    else:
+        print("b")
+
+09)Reach the Target
+There is a cricket match going on between two teams 
+𝐴
+A and 
+𝐵
+B.
+
+Team 
+𝐵
+B is batting second and got a target of 
+𝑋
+X runs. Currently, team 
+𝐵
+B has scored 
+𝑌
+Y runs. Determine how many more runs Team 
+𝐵
+B should score to win the match.
+
+Note: The target score in cricket matches is one more than the number of runs scored by the team that batted first.
+
+Input Format
+The first line of input will contain a single integer 
+𝑇
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers 
+𝑋
+X and 
+𝑌
+Y, the target for team 
+𝐵
+B and the current score of team 
+𝐵
+B respectively.
+Output Format
+For each test case, output how many more runs team 
+𝐵
+B should score to win the match.
+
+Constraints
+1
+≤
+𝑇
+≤
+10
+1≤T≤10
+50
+≤
+𝑌
+<
+𝑋
+≤
+200
+50≤Y<X≤200
+Sample 1:
+Input
+Output
+4
+200 50
+100 99
+130 97
+53 51
+150
+1
+33
+2
+Explanation:
+Test case 
+1
+1: The target is 
+200
+200 runs and team 
+𝐵
+B has already made 
+50
+50 runs. Thus, the team needs to make 
+200
+−
+50
+=
+150
+200−50=150 runs more, to win the match.
+
+Test case 
+2
+2: The target is 
+100
+100 runs and team 
+𝐵
+B has already made 
+99
+99 runs. Thus, the team needs to make 
+100
+−
+99
+=
+1
+100−99=1 runs more, to win the match.
+
+Test case 
+3
+3: The target is 
+130
+130 runs and team 
+𝐵
+B has already made 
+97
+97 runs. Thus, the team needs to make 
+130
+−
+97
+=
+33
+130−97=33 runs more, to win the match.
+
+Test case 
+4
+4: The target is 
+53
+53 runs and team 
+𝐵
+B has already made 
+51
+51 runs. Thus, the team needs to make 
+53
+−
+51
+=
+2
+53−51=2 runs more, to win the match.
+
+ANSWER:
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    print(x-y)
+
+10)Best of Two
+Chef took an examination two times. In the first attempt, he scored 
+𝑋
+X marks while in the second attempt he scored 
+𝑌
+Y marks. According to the rules of the examination, the best score out of the two attempts will be considered as the final score.
+
+Determine the final score of the Chef.
+
+Input Format
+The first line contains a single integer 
+𝑇
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers 
+𝑋
+X and 
+𝑌
+Y — the marks scored by Chef in the first attempt and second attempt respectively.
+Output Format
+For each test case, output the final score of Chef in the examination.
+
+Constraints
+1
+≤
+𝑇
+≤
+1000
+1≤T≤1000
+0
+≤
+𝑋
+,
+𝑌
+≤
+100
+0≤X,Y≤100
+Sample 1:
+Input
+Output
+4
+40 60
+67 55
+50 50
+1 100
+60
+67
+50
+100
+Explanation:
+Test Case 1: The best score out of the two attempts is 
+60
+60.
+
+Test Case 2: The best score out of the two attempts is 
+67
+67.
+
+Test Case 3: The best score out of the two attempts is 
+50
+50.
+
+ANSWER:
+for _ in range(int(input())):
+    x, y = map(int, input().split())
+    if x>=y:
+        print(x)
+    else:
+        print(y)
+
+
+        
+
+
+
